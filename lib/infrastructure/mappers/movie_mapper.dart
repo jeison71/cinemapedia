@@ -7,7 +7,7 @@ class MovieMapper {
   static Movie movieDBToEntity(MovieMovieDb moviedb) => Movie(
         adult: moviedb.adult,
         backdropPath: (moviedb.backdropPath != '')
-            ? 'https://image.tmdb.org/t/p/w500/${moviedb.backdropPath}'
+            ? 'https://image.tmdb.org/t/p/w500${moviedb.backdropPath}'
             : 'https://ih1.redbubble.net/image.533910704.5853/poster,504x498,f8f8f8-pad,600x600,f8f8f8.u3.jpg',
         genreIds: moviedb.genreIds.map((e) => e.toString()).toList(),
         id: moviedb.id,
